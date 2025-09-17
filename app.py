@@ -10,10 +10,10 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
-# .env file se API key load karein
+# Load API key from .env file
 load_dotenv()
 
-# Check karein ki API key set hai ya nahi
+# Check if API key is set or not
 if not os.getenv("OPENAI_API_KEY"):
     raise ValueError("OPENAI_API_KEY environment variable not set. Please create a .env file and add it.")
 
@@ -63,7 +63,7 @@ def process_video():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-# Retrieved documents ko format karne ke liye helper function
+# Helper function to format retrieved documents
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
@@ -80,7 +80,7 @@ def ask_question():
         return jsonify({'error': 'Please process a video first.'}), 400
 
     try:
-        # LangChain Expression Language (LCEL) ka istemal karke chain banayein
+    # Create chain using LangChain Expression Language (LCEL)
         retriever = vector_store.as_retriever()
         
         prompt = PromptTemplate.from_template(
@@ -96,7 +96,7 @@ def ask_question():
 
         llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
 
-        # Ye hai aapka naya RAG Chain
+    # This is your new RAG Chain
         rag_chain = (
             RunnableParallel(
                 context=retriever | format_docs,
@@ -107,7 +107,7 @@ def ask_question():
             | StrOutputParser()
         )
 
-        # Chain ko invoke karke answer generate karein
+    # Invoke the chain to generate answer
         answer = rag_chain.invoke(question)
         return jsonify({'answer': answer})
 
