@@ -1,0 +1,92 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#status-message {
+    font-weight: bold;
+    min-height: 24px;
+}
+
+#qa-section {
+    margin-top: 1.5rem;
+}
+
+#answer-section {
+    margin-top: 1.5rem;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+#answer {
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none;
+}
