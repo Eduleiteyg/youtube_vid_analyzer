@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Video Analyzer 🎥</h1>
+        <div class="input-section">
+            <input type="text" id="video-url" placeholder="Enter YouTube Video URL">
+            <button id="process-btn">Process Video</button>
+        </div>
+        <p id="status-message"></p>
+
+        <div id="qa-section" class="hidden">
+            <textarea id="question" placeholder="Ask a question about the video..."></textarea>
+            <button id="ask-btn">Ask Question</button>
+            <div id="answer-section">
+                <h2>Answer:</h2>
+                <p id="answer"></p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
