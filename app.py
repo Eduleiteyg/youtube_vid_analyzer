@@ -17,7 +17,7 @@ load_dotenv()
 if not os.getenv("OPENAI_API_KEY"):
     raise ValueError("OPENAI_API_KEY environment variable not set. Please create a .env file and add it.")
 
-app = Flask(__name__)
+app = Flask(__name__) 
 
 # Global variable to store the vector store
 vector_store = None
@@ -94,7 +94,7 @@ def ask_question():
             """
         )
 
-        llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
+        llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.1)
 
     # This is your new RAG Chain
         rag_chain = (
